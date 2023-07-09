@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(217, 54%, 11%);
+    font-family: 'Outfit', sans-serif;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 25%;
+    background-color: hsl(216, 50%, 16%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.nft-image{
+    position: relative;
+    display: inline-block;
+}
+
+.nft-image img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.nft-image:hover:after{
+    cursor: pointer;
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    /* background-color: hsl(178, 100%, 50%);
+    opacity: 0.4; */
+    background: url(images/icon-view.svg) center no-repeat;
+    background-size: 50px;
+    
+    
+}
+.nft-image:hover:before{
+    cursor: pointer;
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    background-color: hsl(178, 100%, 50%);
+    opacity: 0.4;
+    border-radius: 10px;
+    
+}
+
+
+
+/* .nft-image:hover img{
+    
+    opacity: 0.4;
+} */
+
+.name{
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+}
+
+.name:hover{
+    cursor: pointer;
+    color: hsl(178, 100%, 50%);
+}
+
+.desc{
+    color: hsl(215, 51%, 70%);
+    font-weight: 300;
+}
+
+
+
+
+.price-time{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.eth-icon{
+    width: 10px;
+    height: 17px;
+}
+
+.price{
+    display: flex;
+    color: hsl(178, 100%, 50%);
+    gap: 6px;
+    align-items: center;
+    font-weight: 400;
+}
+
+.time{
+    display: flex;
+    color: hsl(215, 51%, 70%);
+    gap: 6px;
+    align-items: center;
+}
+
+
+.time-icon{
+    width: 20px;
+}
+
+
+.time{
+    color: hsl(215, 51%, 70%);
+}
+
+hr{ 
+    border:1px solid hsl(215, 32%, 27%);
+}
+
+.creator{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    font-weight: 300;
+    color:hsl(215, 51%, 70%) ;
+}
+
+.avatar{
+    width: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.creator-name{
+    color: white;
+}
+
+.creator-name:hover{
+    cursor: pointer;
+    color: hsl(178, 100%, 50%);;
+}
+
+
+
+@media screen and (max-width:950px) {
+    .card{
+        width: 50%;
+    }
+}
+@media screen and (max-width:500px)  {
+    .card{
+        width: 90%;
+    }
+}
